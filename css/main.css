@@ -13,3 +13,10 @@ div.form-group{
 	display: inline-block;
 	margin: 1%;
 }
+h3{
+	border: 1px solid black;
+	display: inline-block;
+	background-color: aqua;
+	padding: 1%;
+	margin: 1%;
+}
