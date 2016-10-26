@@ -1,0 +1,15 @@
+		/*margenes*/
+.mt-2{
+	margin-top: 2%;
+}
+		/*padding*/
+.pd2{
+	padding: 2%;
+}
+
+div.form-group{
+	background-color: silver;
+	padding: 1%;
+	display: inline-block;
+	margin: 1%;
+}
