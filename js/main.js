@@ -13,11 +13,13 @@ function agregarLista(){
 	input.setAttribute("placeholder", "Nombre de lista");
 	var bton = document.createElement("button");
 	var texto = document.createTextNode("Guardar");
+
 	// APPENDCHILD
 	bton.appendChild(texto);
 	formulario.appendChild(input);
 	formulario.appendChild(bton);
 	pre.appendChild(formulario);
+	input.focus();
 
 	//Creando eventos en GUARDAR (0.0.2)
 	bton.onclick = function(){
@@ -39,5 +41,12 @@ function agregarLista(){
 		tarjeta.appendChild(lista);
 		pre.appendChild(tarjeta);
 		pre.appendChild(boton);
+
+		lista.onclick = function(){
+			tarjeta.removeChild(lista);
+			var textoArea = document.createElement("textarea");
+			tarjeta.appendChild(textoArea);
+			tarjeta.appendChild(lista);
+		}
 	}
 }
