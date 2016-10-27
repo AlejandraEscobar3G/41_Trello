@@ -30,5 +30,6 @@ function agregarLista(){
 		h3.appendChild(titulo);
 		pre.appendChild(h3);
 		diiv.removeChild(formulario);
+		
 	}
 }

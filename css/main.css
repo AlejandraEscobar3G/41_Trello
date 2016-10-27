@@ -8,15 +8,20 @@
 }
 
 div.form-group{
-	background-color: silver;
+	background-color: #607D8B
+;
 	padding: 1%;
 	display: inline-block;
 	margin: 1%;
 }
 h3{
-	border: 1px solid black;
 	display: inline-block;
-	background-color: aqua;
+	background-color: #3F51B5;
+	color: white;
 	padding: 1%;
 	margin: 1%;
+}
+#contenedor{
+	padding: 2%;
+	background-color: grey;
 }
