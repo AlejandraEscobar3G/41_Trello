@@ -22,31 +22,39 @@ function agregarLista(){
 	input.focus();
 
 	//Creando eventos en GUARDAR (0.0.2)
+
 	bton.onclick = function(){
 		var txt = input.value;
-		var titulo = document.createTextNode(txt);
+		
+		if(txt == 0){
+			alert("Ingresa una lista");
+			return false;
+		} else{
+			var titulo = document.createTextNode(txt);
 
-		pre.removeChild(formulario);
+			pre.removeChild(formulario);
 
-		var tarjeta = document.createElement("div");
-		var h2 = document.createElement("h2");
-		var annadir = document.createTextNode("Añadir tarjeta");
-		var lista = document.createElement("button");
+			var tarjeta = document.createElement("div");
+			var h2 = document.createElement("h2");
+			var annadir = document.createTextNode("Añadir tarjeta");
+			var lista = document.createElement("button");
 
-		lista.classList.add("btn", "mt-2");
+			lista.classList.add("btn", "mt-2");
 
-		h2.appendChild(titulo);
-		lista.appendChild(annadir);
-		tarjeta.appendChild(h2);
-		tarjeta.appendChild(lista);
-		pre.appendChild(tarjeta);
-		pre.appendChild(boton);
-
-		lista.onclick = function(){
-			tarjeta.removeChild(lista);
-			var textoArea = document.createElement("textarea");
-			tarjeta.appendChild(textoArea);
+			h2.appendChild(titulo);
+			lista.appendChild(annadir);
+			tarjeta.appendChild(h2);
 			tarjeta.appendChild(lista);
+			pre.appendChild(tarjeta);
+			pre.appendChild(boton);
+
+			lista.onclick = function(){
+				tarjeta.removeChild(lista);
+				var textoArea = document.createElement("textarea");
+				tarjeta.appendChild(textoArea);
+				tarjeta.appendChild(lista);
+				textoArea.focus();
+			}
 		}
 	}
 }
